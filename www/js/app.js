@@ -83,7 +83,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   .state('tab.term', {
     url: '/option/term',
     views: {
-      'term': {
+      'tab-option': {
         templateUrl: 'templates/term-detail.html'
       }
     }
