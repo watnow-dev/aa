@@ -1,0 +1,141 @@
+./lib/ionic/js/angular/angular.js:             "the module name or forgot to load it. If registering a module ensure that you " +
+./lib/ionic/js/angular/angular.js:               'No parent directive that requires a transclusion with slot name "{0}". ' +
+./lib/ionic/js/angular/angular.js:    function assertNoDuplicate(what, previousDirective, directive, element) {
+./lib/ionic/js/angular/angular.js:            directive.name, wrapModuleNameIfDefined(directive.$$moduleName), what, startingTag(element));
+./lib/ionic/js/angular/angular.js:      "interpolations that concatenate multiple expressions when a trusted value is " +
+./lib/ionic/js/angular/angular.js:      var that = this;
+./lib/ionic/js/angular/angular.js:        that.$$resolve(val);
+./lib/ionic/js/angular/angular.js:        that.$$reject(val);
+./lib/ionic/js/angular/angular.js:          Note that `ng-value="specialValue"` sets radio item's value to be the value of `$scope.specialValue`.
+./lib/ionic/js/angular/angular.js:   any pre-existing CSS transitions already on the element. To get an idea of what happens during a class-based animation, be sure
+./lib/ionic/js/angular/angular.js:                throw new Error('expected an error that matches ' + regex);
+./lib/ionic/js/angular/angular.js:Returning `undefined` from a parser means a parse error occurred. In that case,
+./lib/ionic/js/angular/angular.js:      var that = this;
+./lib/ionic/js/angular/angular.js:          that.$options.updateOnDefault = true;
+./lib/ionic/js/angular/angular.js:       'No parent directive that requires a transclusion found. ' +
+./lib/ionic/js/ionic.bundle.js:        provided that another scrolling action has not begun. Used to know
+./lib/ionic/js/ionic.bundle.js:             "the module name or forgot to load it. If registering a module ensure that you " +
+./lib/ionic/js/ionic.bundle.js:               'No parent directive that requires a transclusion with slot name "{0}". ' +
+./lib/ionic/js/ionic.bundle.js:    function assertNoDuplicate(what, previousDirective, directive, element) {
+./lib/ionic/js/ionic.bundle.js:            directive.name, wrapModuleNameIfDefined(directive.$$moduleName), what, startingTag(element));
+./lib/ionic/js/ionic.bundle.js:      "interpolations that concatenate multiple expressions when a trusted value is " +
+./lib/ionic/js/ionic.bundle.js:      var that = this;
+./lib/ionic/js/ionic.bundle.js:        that.$$resolve(val);
+./lib/ionic/js/ionic.bundle.js:        that.$$reject(val);
+./lib/ionic/js/ionic.bundle.js:          Note that `ng-value="specialValue"` sets radio item's value to be the value of `$scope.specialValue`.
+./lib/ionic/js/ionic.bundle.js:   any pre-existing CSS transitions already on the element. To get an idea of what happens during a class-based animation, be sure
+./lib/ionic/js/ionic.bundle.js:                throw new Error('expected an error that matches ' + regex);
+./lib/ionic/js/ionic.bundle.js:Returning `undefined` from a parser means a parse error occurred. In that case,
+./lib/ionic/js/ionic.bundle.js:      var that = this;
+./lib/ionic/js/ionic.bundle.js:          that.$options.updateOnDefault = true;
+./lib/ionic/js/ionic.bundle.js:       'No parent directive that requires a transclusion found. ' +
+./lib/ionic/js/ionic.bundle.js:    return pattern.replace(/\$(\$|\d{1,2})/, function (m, what) {
+./lib/ionic/js/ionic.bundle.js:      return match[what === '$' ? 0 : Number(what)];
+./lib/ionic/js/ionic.bundle.js:  this.when = function (what, handler) {
+./lib/ionic/js/ionic.bundle.js:    if (isString(what)) what = $urlMatcherFactory.compile(what);
+./lib/ionic/js/ionic.bundle.js:      matcher: function (what, handler) {
+./lib/ionic/js/ionic.bundle.js:          return handleIfMatch($injector, handler, what.exec($location.path(), $location.search()));
+./lib/ionic/js/ionic.bundle.js:          prefix: isString(what.prefix) ? what.prefix : ''
+./lib/ionic/js/ionic.bundle.js:      regex: function (what, handler) {
+./lib/ionic/js/ionic.bundle.js:        if (what.global || what.sticky) throw new Error("when() RegExp must not be global or sticky");
+./lib/ionic/js/ionic.bundle.js:          return handleIfMatch($injector, handler, what.exec($location.path()));
+./lib/ionic/js/ionic.bundle.js:          prefix: regExpPrefix(what)
+./lib/ionic/js/ionic.bundle.js:    var check = { matcher: $urlMatcherFactory.isMatcher(what), regex: what instanceof RegExp };
+./lib/ionic/js/ionic.bundle.js:      if (check[n]) return this.rule(strategies[n](what, handler));
+./lib/ionic/js/ionic.bundle.js:    throw new Error("invalid 'what' in when()");
+./lib/ionic/js/ionic.js:        provided that another scrolling action has not begun. Used to know
+./lib/ionic/js/angular-ui/angular-ui-router.js:    return pattern.replace(/\$(\$|\d{1,2})/, function (m, what) {
+./lib/ionic/js/angular-ui/angular-ui-router.js:      return match[what === '$' ? 0 : Number(what)];
+./lib/ionic/js/angular-ui/angular-ui-router.js:  this.when = function (what, handler) {
+./lib/ionic/js/angular-ui/angular-ui-router.js:    if (isString(what)) what = $urlMatcherFactory.compile(what);
+./lib/ionic/js/angular-ui/angular-ui-router.js:      matcher: function (what, handler) {
+./lib/ionic/js/angular-ui/angular-ui-router.js:          return handleIfMatch($injector, handler, what.exec($location.path(), $location.search()));
+./lib/ionic/js/angular-ui/angular-ui-router.js:          prefix: isString(what.prefix) ? what.prefix : ''
+./lib/ionic/js/angular-ui/angular-ui-router.js:      regex: function (what, handler) {
+./lib/ionic/js/angular-ui/angular-ui-router.js:        if (what.global || what.sticky) throw new Error("when() RegExp must not be global or sticky");
+./lib/ionic/js/angular-ui/angular-ui-router.js:          return handleIfMatch($injector, handler, what.exec($location.path()));
+./lib/ionic/js/angular-ui/angular-ui-router.js:          prefix: regExpPrefix(what)
+./lib/ionic/js/angular-ui/angular-ui-router.js:    var check = { matcher: $urlMatcherFactory.isMatcher(what), regex: what instanceof RegExp };
+./lib/ionic/js/angular-ui/angular-ui-router.js:      if (check[n]) return this.rule(strategies[n](what, handler));
+./lib/ionic/js/angular-ui/angular-ui-router.js:    throw new Error("invalid 'what' in when()");
+./lib/ionic/css/ionic.css:.ion-android-chat:before,
+./lib/ionic/css/ionic.css:.ion-chatbox:before,
+./lib/ionic/css/ionic.css:.ion-chatbox-working:before,
+./lib/ionic/css/ionic.css:.ion-chatboxes:before,
+./lib/ionic/css/ionic.css:.ion-chatbubble:before,
+./lib/ionic/css/ionic.css:.ion-chatbubble-working:before,
+./lib/ionic/css/ionic.css:.ion-chatbubbles:before,
+./lib/ionic/css/ionic.css:.ion-ios-chatboxes:before,
+./lib/ionic/css/ionic.css:.ion-ios-chatboxes-outline:before,
+./lib/ionic/css/ionic.css:.ion-ios-chatbubble:before,
+./lib/ionic/css/ionic.css:.ion-ios-chatbubble-outline:before,
+./lib/ionic/css/ionic.css:.ion-social-snapchat:before,
+./lib/ionic/css/ionic.css:.ion-social-snapchat-outline:before,
+./lib/ionic/css/ionic.css:.ion-social-whatsapp:before,
+./lib/ionic/css/ionic.css:.ion-social-whatsapp-outline:before,
+./lib/ionic/css/ionic.css:.ion-android-chat:before {
+./lib/ionic/css/ionic.css:.ion-chatbox:before {
+./lib/ionic/css/ionic.css:.ion-chatbox-working:before {
+./lib/ionic/css/ionic.css:.ion-chatboxes:before {
+./lib/ionic/css/ionic.css:.ion-chatbubble:before {
+./lib/ionic/css/ionic.css:.ion-chatbubble-working:before {
+./lib/ionic/css/ionic.css:.ion-chatbubbles:before {
+./lib/ionic/css/ionic.css:.ion-ios-chatboxes:before {
+./lib/ionic/css/ionic.css:.ion-ios-chatboxes-outline:before {
+./lib/ionic/css/ionic.css:.ion-ios-chatbubble:before {
+./lib/ionic/css/ionic.css:.ion-ios-chatbubble-outline:before {
+./lib/ionic/css/ionic.css:.ion-social-snapchat:before {
+./lib/ionic/css/ionic.css:.ion-social-snapchat-outline:before {
+./lib/ionic/css/ionic.css:.ion-social-whatsapp:before {
+./lib/ionic/css/ionic.css:.ion-social-whatsapp-outline:before {
+./templates/search-detail.html:<ion-view view-title="{{chat.name}}">
+./templates/search-detail.html:    <img ng-src="{{chat.face}}" style="width: 64px; height: 64px">
+./templates/search-detail.html:      {{chat.lastText}}
+./templates/tab-chats.html:<ion-view view-title="Chats">
+./templates/tab-chats.html:        <img ng-src="{{chat.face}}">
+./templates/tab-chats.html:        <h2>{{chat.name}}</h2>
+./templates/tab-chats.html:        <p>{{chat.lastText}}</p>
+./templates/tab-chats.html:        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+./templates/chat-detail.html:<ion-view view-title="{{chat.name}}">
+./templates/chat-detail.html:    <img ng-src="{{chat.face}}" style="width: 64px; height: 64px">
+./templates/chat-detail.html:      {{chat.lastText}}
+./templates/tab-searchs.html:<ion-view view-title="Chats">
+./templates/tab-searchs.html:        <img ng-src="{{chat.face}}">
+./templates/tab-searchs.html:        <h2>{{chat.name}}</h2>
+./templates/tab-searchs.html:        <p>{{chat.lastText}}</p>
+./templates/tab-searchs.html:        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+./templates/tabs.html:navigation history that also transitions its views in and out.
+./templates/tabs.html:  <!-- Chats Tab -->
+./templates/tabs.html:    <ion-nav-view name="tab-chats"></ion-nav-view>
+./templates/tabs.html:  <!-- Chats Tab -->
+./js/app.js:  .state('tab.chats', {
+./js/app.js:      url: '/chats',
+./js/app.js:        'tab-chats': {
+./js/app.js:          templateUrl: 'templates/tab-chats.html',
+./js/app.js:          controller: 'ChatsCtrl'
+./js/app.js:  .state('tab.chat-detail', {
+./js/app.js:    url: '/chats/:chatId',
+./js/app.js:      'tab-chats': {
+./js/app.js:        templateUrl: 'templates/chat-detail.html',
+./js/app.js:        controller: 'ChatDetailCtrl'
+./js/controllers.js:.controller('ChatsCtrl', function($scope, Chats) {
+./js/controllers.js:  $scope.chats = Chats.all();
+./js/controllers.js:  $scope.remove = function(chat) {
+./js/controllers.js:    Chats.remove(chat);
+./js/controllers.js:.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
+./js/controllers.js:  $scope.chat = Chats.get($stateParams.chatId);
+./js/controllers.js:.controller('SearchsCtrl', function($scope, Chats) {
+./js/controllers.js:  $scope.chats = Chats.all();
+./js/controllers.js:  $scope.remove = function(chat) {
+./js/controllers.js:    Chats.remove(chat);
+./js/controllers.js:.controller('SearchDetailCtrl', function($scope, $stateParams, Chats) {
+./js/controllers.js:  $scope.chat = Chats.get($stateParams.isbnId);
+./js/services.js:.factory('Chats', function() {
+./js/services.js:  var chats = [{
+./js/services.js:      return chats;
+./js/services.js:    remove: function(chat) {
+./js/services.js:      chats.splice(chats.indexOf(chat), 1);
+./js/services.js:    get: function(chatId) {
+./js/services.js:      for (var i = 0; i < chats.length; i++) {
+./js/services.js:        if (chats[i].id === parseInt(chatId)) {
+./js/services.js:          return chats[i];

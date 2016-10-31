@@ -40,12 +40,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
   // Each tab has its own nav history stack:
 
-  .state('tab.dash', {
-    url: '/dash',
+  .state('tab.top', {
+    url: '/top',
     views: {
       'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
+        templateUrl: 'templates/tab-top.html',
+        controller: 'TopCtrl'
       }
     }
   })
@@ -58,28 +58,56 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
           controller: 'ChatsCtrl'
         }
       }
-    })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
-        }
+  })
+
+  .state('tab.chat-detail', {
+    url: '/chats/:chatId',
+    views: {
+      'tab-chats': {
+        templateUrl: 'templates/chat-detail.html',
+        controller: 'ChatDetailCtrl'
       }
-    })
+    }
+  })
 
   .state('tab.option', {
-    url: '/option',
+   url: '/option',
     views: {
       'tab-option': {
         templateUrl: 'templates/tab-option.html',
         controller: 'OptionCtrl'
       }
     }
-  });
+  })
 
+  .state('tab.term', {
+    url: '/option/term',
+    views: {
+      'term': {
+        templateUrl: 'templates/term-detail.html'
+      }
+    }
+  })
+  .state('tab.searchs', {
+      url: '/searchs',
+      views: {
+        'tab-searchs': {
+          templateUrl: 'templates/tab-searchs.html',
+          controller: 'SearchsCtrl'
+        }
+      }
+  })
+
+  .state('tab.search-detail', {
+    url: '/searchs/:isbnId',
+    views: {
+      'tab-searchs': {
+        templateUrl: 'templates/search-detail.html',
+        controller: 'SearchDetailCtrl'
+      }
+    }
+  })
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/tab/top');
 
 });
