@@ -10,7 +10,7 @@ angular.module('starter.controllers', [])
     $ionicHistory.goBack();
   }
 })
-.controller('SearchsCtrl', function($scope, Chats) {
+.controller('SearchsCtrl', function($scope, Books) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
   // To listen for when this page is active (for example, to refresh data),
@@ -19,11 +19,11 @@ angular.module('starter.controllers', [])
   //$scope.$on('$ionicView.enter', function(e) {
   //});
 
-  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
+  $scope.books = Books.all();
+  $scope.remove = function(book) {
+    Books.remove(book);
   };
 })
-.controller('SearchDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.isbnId);
+.controller('SearchDetailCtrl', function($scope, $stateParams, Books) {
+  $scope.book = Books.get($stateParams.isbnId);
 });

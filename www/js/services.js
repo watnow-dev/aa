@@ -1,47 +1,47 @@
 angular.module('starter.services', [])
 
-.factory('Chats', function() {
+.factory('Books', function() {
   // Might use a resource here that returns a JSON array
 
   // Some fake testing data
-  var chats = [{
-    id: 0,
-    name: 'Ben Sparrow',
-    lastText: 'You on your way?',
-    face: 'img/ben.png'
+  var books = [{
+    id: 9784873117584,
+    title: 'Ben Sparrow',
+    introduction: 'You on your way?',
+    img: 'http://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/7584/9784873117584.jpg?_ex=200x200'
   }, {
-    id: 1,
-    name: 'Max Lynx',
-    lastText: 'Hey, it\'s me',
-    face: 'img/max.png'
+    id: 9784764905160,
+    title: 'Max Lynx',
+    introduction: 'Hey, it\'s me',
+    img: 'http://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/5160/9784764905160.jpg?_ex=200x200'
   }, {
-    id: 2,
-    name: 'Adam Bradleyson',
-    lastText: 'I should buy a boat',
-    face: 'img/adam.jpg'
+    id: 9784339028515,
+    title: 'Adam Bradleyson',
+    introduction: 'I should buy a boat',
+    img: 'http://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/8515/9784339028515.jpg?_ex=200x200'
   }, {
-    id: 3,
-    name: 'Perry Governor',
-    lastText: 'Look at my mukluks!',
-    face: 'img/perry.png'
+    id: 9784873117683,
+    title: 'Perry Governor',
+    introduction: 'Look at my mukluks!',
+    img: 'http://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/7683/9784873117683.jpg?_ex=200x200'
   }, {
-    id: 4,
-    name: 'Mike Harrington',
-    lastText: 'This is wicked good ice cream.',
-    face: 'img/mike.png'
+    id: 9784873117560,
+    title: 'Mike Harrington',
+    introduction: 'This is wicked good ice cream.',
+    img: 'http://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/7560/9784873117560.jpg?_ex=200x200'
   }];
 
   return {
     all: function() {
-      return chats;
+      return books;
     },
-    remove: function(chat) {
-      chats.splice(chats.indexOf(chat), 1);
+    remove: function(book) {
+      books.splice(books.indexOf(book), 1);
     },
-    get: function(chatId) {
-      for (var i = 0; i < chats.length; i++) {
-        if (chats[i].id === parseInt(chatId)) {
-          return chats[i];
+    get: function(isbnId) {
+      for (var i = 0; i < books.length; i++) {
+        if (books[i].id === parseInt(isbnId)) {
+          return books[i];
         }
       }
       return null;
