@@ -1,3 +1,5 @@
+root = 'https://library-api-a4geru.c9users.io/';//'https://isbn-api-123.herokuapp.com/';
+
 angular.module('starter.controllers', [])
 
 .controller('TopCtrl', function($scope) {})
@@ -24,6 +26,23 @@ angular.module('starter.controllers', [])
     Books.remove(book);
   };
 })
-.controller('SearchDetailCtrl', function($scope, $stateParams, Books) {
-  $scope.book = Books.get($stateParams.isbnId);
+.controller('SearchDetailCtrl', function($scope, $stateParams, Books, $http) {
+  var book = {};
+  $http({
+    method: 'GET',
+    url: root + "isbn/" + $stateParams.isbnId
+  }).then(function successCallback(response) {
+    $scope.book = response.data;
+    console.log(response.data);
+    console.log("success");
+          
+  }, function errorCallback(response) {
+    $scope.book = {  
+      id: -1,
+      title: 'Server connect error',
+      introduction: response,
+      img: ''
+    }
+
+  });
 });
