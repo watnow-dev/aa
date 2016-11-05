@@ -1,4 +1,4 @@
-root = 'https://library-api-a4geru.c9users.io/';//'https://isbn-api-123.herokuapp.com/';
+root = 'https://isbn-api-123.herokuapp.com/';//https://library-api-a4geru.c9users.io/';
 
 angular.module('starter.controllers', [])
 
