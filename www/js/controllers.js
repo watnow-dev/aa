@@ -28,14 +28,12 @@ angular.module('starter.controllers', [])
 })
 .controller('SearchDetailCtrl', function($scope, $stateParams, Books, $http) {
   var book = {};
+  console.log(location.href);
   $http({
     method: 'GET',
     url: root + "isbn/" + $stateParams.isbnId
   }).then(function successCallback(response) {
     $scope.book = response.data;
-    console.log(response.data);
-    console.log("success");
-          
   }, function errorCallback(response) {
     $scope.book = {  
       id: -1,
@@ -43,6 +41,5 @@ angular.module('starter.controllers', [])
       introduction: response,
       img: ''
     }
-
   });
 });

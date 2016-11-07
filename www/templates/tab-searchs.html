@@ -1,6 +1,10 @@
 <ion-view view-title="検索結果">
   <ion-content>
     <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap" onClick ="scanBarcode()">
+        <h2>検索</h2>
+        <p>QRコードを使う</p>
+      </ion-item>
       <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="book in books" type="item-text-wrap" href="#/tab/searchs/{{book.id}}">
         <img ng-src="{{book.img}}">
         <h2>{{book.title}}</h2>
