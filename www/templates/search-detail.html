@@ -6,17 +6,22 @@
 -->
 <ion-view view-title="{{book.title}}">
   <ion-content>
+    <div ng-if='book!=none'>
     <img ng-src="{{book.img}}" style="width: 150px; height: 200px">
 
     <ion-list>
-      <ion-item class="item-remove-animate" type="item-text-wrap">
+      <ion-item class="item-remove-animate" type="item-text-wrap" ng-if='book.place!="No Data"'>
         <h2>請求記号 : {{book.place}}</h2>
       </ion-item>
-      <ion-item class="item-remove-animate" type="item-text-wrap">
+      <ion-item class="item-remove-animate" type="item-text-wrap" ng-if='book.place!="No Data"'>
         <h2>配架場所</h2>
       </ion-item>
       <ion-item class="item-remove-animate" type="item-text-wrap" ng-repeat="library in book.libraries">
         {{library}}
+      </ion-item>
+      
+      <ion-item class="item-remove-animate" type="item-text-wrap" ng-if='book.place=="No Data"'>
+        リクエストを送る
       </ion-item>
       <ion-item class="item-remove-animate" type="item-text-wrap">
         <h2>詳細</h2>
@@ -24,4 +29,8 @@
     </ion-list>
     <p>{{book.detail}}</p>
   </ion-content>
+  </div>
+  <div ng-if='book==none'>
+  loading
+  </div>
 </ion-view>

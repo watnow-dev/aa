@@ -29,6 +29,12 @@ angular.module('starter.services', [])
     title: 'Mike Harrington',
     introduction: 'This is wicked good ice cream.',
     img: 'http://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/7560/9784873117560.jpg?_ex=200x200'
+  }, {
+    id: 9784822277420,
+    title: 'Mike Harrington',
+    introduction: 'This is wicked good ice cream.',
+    img: 'http://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/7420/9784822277420.jpg?_ex=200x200'
+    
   }];
 
   return {
