@@ -20,7 +20,6 @@ angular.module('starter.controllers', [])
   //
   //$scope.$on('$ionicView.enter', function(e) {
   //});
-
   $scope.books = Books.all();
   $scope.remove = function(book) {
     Books.remove(book);
