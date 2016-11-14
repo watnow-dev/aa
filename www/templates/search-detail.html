@@ -6,22 +6,27 @@
 -->
 <ion-view view-title="{{book.title}}">
   <ion-content>
-    <img ng-src="{{book.img}}" style="width: 150px; height: 200px">
-
-    <ion-list>
-      <ion-item class="item-remove-animate" type="item-text-wrap">
-        <h2>請求記号 : {{book.place}}</h2>
-      </ion-item>
-      <ion-item class="item-remove-animate" type="item-text-wrap">
-        <h2>配架場所</h2>
-      </ion-item>
-      <ion-item class="item-remove-animate" type="item-text-wrap" ng-repeat="library in book.libraries">
-        {{library}}
-      </ion-item>
-      <ion-item class="item-remove-animate" type="item-text-wrap">
-        <h2>詳細</h2>
-      </ion-item>
-    </ion-list>
-    <p>{{book.detail}}</p>
+    <div ng-if='book!=""'>
+        <img ng-src="{{book.img}}" style="width: 150px; height: 200px">
+    
+        <ion-list>
+          <ion-item class="item-remove-animate" type="item-text-wrap">
+            <h2>請求記号 : {{book.place}}</h2>
+          </ion-item>
+          <ion-item class="item-remove-animate" type="item-text-wrap">
+            <h2>配架場所</h2>
+          </ion-item>
+          <ion-item class="item-remove-animate" type="item-text-wrap" ng-repeat="library in book.libraries">
+            {{library}}
+          </ion-item>
+          <ion-item class="item-remove-animate" type="item-text-wrap">
+            <h2>詳細</h2>
+          </ion-item>
+        </ion-list>
+        <p>{{book.detail}}</p>
+    </div>
+    <div ng-if='book==""'>
+    aa
+    </div>
   </ion-content>
 </ion-view>

@@ -26,7 +26,7 @@ angular.module('starter.controllers', [])
   };
 })
 .controller('SearchDetailCtrl', function($scope, $stateParams, Books, $http) {
-  var book = {};
+  $scope.book = "";
   $http({
     method: 'GET',
     url: root + "isbn/" + $stateParams.isbnId
