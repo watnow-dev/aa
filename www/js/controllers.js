@@ -1,19 +1,8 @@
-root = 'https://isbn-api-123.herokuapp.com/';//'https://library-api-a4geru.c9users.io/';
+root = 'https://isbn-api-123.herokuapp.com/';//https://library-api-a4geru.c9users.io/';
 
 angular.module('starter.controllers', [])
 
-.controller('TopCtrl', function($scope, $http) {
-  $http({
-    method: 'GET',
-    url: root + "info"
-  }).then(function successCallback(response) {
-    $scope.book = response["data"]["open"]["300000"][8];
-    console.log(response);
-  }, function errorCallback(response) {
-    
-  });    
-    
-})
+.controller('TopCtrl', function($scope) {})
 
 .controller('OptionCtrl', function($scope) {
 })
@@ -59,7 +48,7 @@ angular.module('starter.controllers', [])
   };
 })
 .controller('SearchDetailCtrl', function($scope, $stateParams, Books, $http) {
-  var book = "none";
+  var book = {};
   console.log(location.href);
   $http({
     method: 'GET',
