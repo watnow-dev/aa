@@ -8,13 +8,15 @@
   <ion-content>
     <div ng-if='book!=""'>
         <img ng-src="{{book.img}}" style="width: 150px; height: 200px">
-    
         <ion-list>
-          <ion-item class="item-remove-animate" type="item-text-wrap">
+          <ion-item class="item-remove-animate" type="item-text-wrap" ng-if='book.place!="No Data"'>
             <h2>請求記号 : {{book.place}}</h2>
           </ion-item>
-          <ion-item class="item-remove-animate" type="item-text-wrap">
+          <ion-item class="item-remove-animate" type="item-text-wrap" ng-if='book.place!="No Data"'>
             <h2>配架場所</h2>
+          </ion-item>
+          <ion-item class="item-remove-animate" type="item-text-wrap" ng-if='book.place=="No Data"'>
+            <a href="#/tab/request/{{isbn}}"><h2>大学へリクエストする</h2></a>
           </ion-item>
           <ion-item class="item-remove-animate" type="item-text-wrap" ng-repeat="library in book.libraries">
             {{library}}

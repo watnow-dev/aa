@@ -87,6 +87,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     }
   })
+  
+  .state('tab.request-detail', {
+    url: '/request/:isbnId',
+    views: {
+      'tab-searchs': {
+        templateUrl: 'templates/request-detail.html',
+        controller: 'RequestDetailCtrl'
+      }
+    }
+  })
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/top');
