@@ -1,16 +1,21 @@
-<ion-view view-title="検索結果">
-  <ion-content>
-    <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="book in books" type="item-text-wrap" href="#/tab/searchs/{{book.id}}">
-        <img ng-src="{{book.img}}">
-        <h2>{{book.title}}</h2>
-        <p>{{book.introduction}}</p>
-        <i class="icon ion-chevron-right icon-accessory"></i>
+<ion-view view-title="Scanner">
+    <ion-content style="background: #e8ebf1;" class="padding">
+        <div class="card">
+            <div class="item">
+                <button class="button button-block button-positive" ng-click="vm.scan()">
+                    <i class="icon ion-qr-scanner"></i>
+                    Scan Now
+                </button>
+            </div>
+        </div>
 
-        <ion-option-button class="button-assertive" ng-click="remove(book)">
-          Delete
-        </ion-option-button>
-      </ion-item>
-    </ion-list>
-  </ion-content>
+        <div class="card">
+            <div class="item item-divider">
+                Scan Results
+            </div>
+            <div class="item item-text-wrap">
+                {{vm.scanResults}}
+            </div>
+        </div>
+    </ion-content>
 </ion-view>
