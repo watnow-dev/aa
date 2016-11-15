@@ -2,7 +2,35 @@ root = 'https://isbn-api-123.herokuapp.com/';//'https://library-api-a4geru.c9use
 
 angular.module('starter.controllers', [])
 
-.controller('TopCtrl', function($scope) {})
+.controller('TopCtrl', function($scope, $http, $ionicSlideBoxDelegate) {
+  $scope.info = "hello";
+  var dt = new Date();
+  var month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  var weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  $scope.month = month[dt.getMonth()]
+  $scope.day = dt.getDate();
+  $scope.weekday = weekday[dt.getDay()];
+
+  $http({
+    method: 'GET',
+    url: root + "info"
+  }).then(function successCallback(response) {
+    $scope.info = response["data"];
+    $ionicSlideBoxDelegate.update();
+  }, function errorCallback(response) {
+    
+  });    
+  $scope.link_news = function(url){
+    window.open('http://www.ritsumei.ac.jp/'+url, '_system', 'location=yes,enableViewportScale=yes');
+  }
+  $scope.judge = function(date){
+    var month = dt.getMonth();
+    var year = dt.getFullYear();
+
+    if(date.substring(0,7) > year + "." + ( '0' + (dt.getMonth()-1) ).slice( -2 ))return true;
+    else return false;
+  }
+})
 
 .controller('OptionCtrl', function($scope) {
 })

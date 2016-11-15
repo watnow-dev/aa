@@ -1,2 +1,35 @@
 /* This is a CSS file */
 
+#month {
+  margin: 5% auto 5% 20%;
+  text-align: left;
+  font-size: 200%;
+}
+
+#day {
+  margin: auto auto;
+  text-align: center;
+  font-size: 400%;
+}
+
+#weekday {
+  margin: 5% 20% 5% auto;
+  text-align: right;
+  font-size: 200%;
+}
+
+#boxes {
+  height: 120px;
+  width: 340px;
+  margin: 10px auto;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+}
+.box{
+  text-align: center;
+  width 220px;
+}
+
