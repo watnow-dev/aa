@@ -33,6 +33,9 @@ angular.module('starter.controllers', [])
 })
 
 .controller('OptionCtrl', function($scope) {
+  $scope.link_to_term = function(){
+    location.href="#/tab/option/term";
+  }
 })
 
 .controller('TermCtrl', function($scope) {
@@ -52,6 +55,9 @@ angular.module('starter.controllers', [])
   $scope.remove = function(book) {
     Books.remove(book);
   };
+  $scope.link_to_detail = function(isbn){
+     location.href="#/tab/searchs/"+isbn
+  }
 })
 .controller('SearchDetailCtrl', function($scope, $stateParams, Books, $http) {
   $scope.book = "";

@@ -20,16 +20,24 @@
 
 #boxes {
   height: 120px;
-  width: 340px;
-  margin: 10px auto;
+  padding: auto;
   text-align: center;
   border-bottom: 1px solid #ccc;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
-  padding: 10px;
 }
 .box{
   text-align: center;
   width 220px;
 }
 
+h2 .ng-binding{
+  background-color: #000000 !important;
+}
+
+div #news-title{
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  border-left: 10px solid white;
+  font-size: 20px
+}

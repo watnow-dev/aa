@@ -1,2 +1,26 @@
 /* This is a CSS file */
 
+#photo{
+  text-align: center;
+  width: 150px;
+  height: 200px;
+  margin: 30px auto;
+  display: block;
+}
+
+#loader{
+    animation: spin 1s linear infinite; /*1秒毎にくるくる回転するアニメーション*/
+    margin: 50% auto;
+    width: 100px; /*ローディングアイコンの横サイズ*/
+    height: 100px; /*ローディングアイコンの縦サイズ*/
+    border-radius: 50%;  /*CSS3で円を書く*/
+    border: 20px solid #fff;  /*円に○の白枠をつける*/
+    border-right-color: transparent; /*円の右にC状の空きをつける*/
+}
+@keyframes spin
+{
+    0% { transform: rotate(0deg);   opacity: 0.2; } /*0%の時は20％の透明度*/
+    50%  { transform: rotate(180deg); opacity: 1.0; } /*50%の時は透明度なし*/
+    100%   { transform: rotate(360deg); opacity: 0.2; } /*100%の時に20％の透明度に戻る*/
+ 
+}

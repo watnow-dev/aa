@@ -1,2 +1,15 @@
 /* This is a CSS file */
 
+
+h3{
+  text-align: center;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-left: 10px solid white;
+  font-size: 20px;
+  padding: 10px;
+}
+
+p{
+  font-size: 15px;
+}
