@@ -8,7 +8,7 @@ h2,h3, div{
   color: white;
 }
 
-a{
+a, div.tabs {
   background:linear-gradient(to bottom,#38A4D0, #6CC3B4) !important;
   border-style: none !important;
 }

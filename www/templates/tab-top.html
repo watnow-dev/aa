@@ -1,4 +1,4 @@
-<ion-view view-title="トップページ">
+<ion-view view-title="">
   <ion-content class="padding">
     <div id="month"><h2>{{month}}</h2></div>
     <div id="day">{{day}}</div>
@@ -9,7 +9,7 @@
       </ion-slide>
     </ion-slide-box>
     <div id="news-title"><p>Library News</p></div>
-    <div class="scrollbox">
+    <div id="scrollbox">
       <div ng-repeat="news in info['news']" class="NewxBox" ng-if="judge(news[0])">
         <div ng-click='link_news("{{news[2]}}")'>
           {{news[0]}} -

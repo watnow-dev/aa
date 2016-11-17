@@ -2,8 +2,12 @@
   <ion-content>
     <ion-list>
       <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap" onClick ="scanBarcode()">
-        <h2>検索</h2>
-        <p>QRコードを使う</p>
+        <h2>QR-コード検索</h2>
+        <p>バーコードからの検索</p>
+      </ion-item>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap" onClick ="scanBarcode()">
+        <h2>学内検索</h2>
+        <p>検索ワードからの検索</p>
       </ion-item>
       
       <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="book in books" type="item-text-wrap" ng-click="link_to_detail(book.id)">
