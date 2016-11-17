@@ -3,7 +3,6 @@
     <div id="month"><h2>{{month}}</h2></div>
     <div id="day">{{day}}</div>
     <div id="weekday"><h2>{{weekday}}</h2></div>
-    
     <ion-slide-box on-slide-changed="slideHasChanged($index)" id="boxes">
       <ion-slide options="options" ng-repeat="library in info['open']">
         <div class="box"><h3>{{library[0]}}</h3><h2>{{library[day]}}</h2></div>

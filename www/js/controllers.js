@@ -3,23 +3,26 @@ root = 'https://isbn-api-123.herokuapp.com/';//'https://library-api-a4geru.c9use
 angular.module('starter.controllers', [])
 
 .controller('TopCtrl', function($scope, $http, $ionicSlideBoxDelegate) {
-  $scope.info = "hello";
+  $scope.info = JSON.parse(localStorage.getItem("info"));
   var dt = new Date();
   var month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   var weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   $scope.month = month[dt.getMonth()]
   $scope.day = dt.getDate();
   $scope.weekday = weekday[dt.getDay()];
-
-  $http({
-    method: 'GET',
-    url: root + "info"
-  }).then(function successCallback(response) {
-    $scope.info = response["data"];
-    $ionicSlideBoxDelegate.update();
-  }, function errorCallback(response) {
-    
-  });    
+  if(!localStorage.getItem("info") || $scope.info["month"] != dt.getMonth()+1){
+    $http({
+      method: 'GET',
+      url: root + "info"
+    }).then(function successCallback(response) {
+      $scope.info = response["data"];
+      localStorage.setItem("info", JSON.stringify(response["data"]));
+      console.log("reload");
+      $ionicSlideBoxDelegate.update();
+    }, function errorCallback(response) {
+      
+    });    
+  }
   $scope.link_news = function(url){
     window.open('http://www.ritsumei.ac.jp/'+url, '_system', 'location=yes,enableViewportScale=yes');
   }
