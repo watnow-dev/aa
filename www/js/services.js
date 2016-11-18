@@ -4,37 +4,7 @@ angular.module('starter.services', [])
   // Might use a resource here that returns a JSON array
 
   // Some fake testing data
-  var books = [{
-    id: 9784873117584,
-    title: 'Ben Sparrow',
-    introduction: 'You on your way?',
-    img: 'http://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/7584/9784873117584.jpg?_ex=200x200'
-  }, {
-    id: 9784764905160,
-    title: 'Max Lynx',
-    introduction: 'Hey, it\'s me',
-    img: 'http://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/5160/9784764905160.jpg?_ex=200x200'
-  }, {
-    id: 9784339028515,
-    title: 'Adam Bradleyson',
-    introduction: 'I should buy a boat',
-    img: 'http://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/8515/9784339028515.jpg?_ex=200x200'
-  }, {
-    id: 9784873117683,
-    title: 'Perry Governor',
-    introduction: 'Look at my mukluks!',
-    img: 'http://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/7683/9784873117683.jpg?_ex=200x200'
-  }, {
-    id: 9784873117560,
-    title: 'Mike Harrington',
-    introduction: 'This is wicked good ice cream.',
-    img: 'http://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/7560/9784873117560.jpg?_ex=200x200'
-  }, {
-    id: 9784798045177,
-    title: 'Mike Harrington',
-    introduction: 'This is wicked good ice cream.',
-    img: 'http://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/5177/9784798045177.jpg?_ex=200x200'
-  }];
+  var books = [];
 
   return {
     all: function() {
@@ -50,6 +20,50 @@ angular.module('starter.services', [])
         }
       }
       return null;
+    },
+    update: function(data){
+      books = data;
+    }
+  };
+})
+.factory('History', function() {
+  if(localStorage["history"]!== undefined)
+    histories = JSON.parse(localStorage["history"]);
+  else
+    histories = [];
+
+  return {
+    all: function() {
+      return histories;
+    },update: function(data=""){
+      if(!localStorage["history"]){
+        console.log("first time");
+        localStorage["history"] = "[" + JSON.stringify(response.data) + "]";
+      } else{
+        console.log("second time");
+  
+        var db = localStorage["history"];
+        var _isbn = data["isbn"];
+        console.log(data["isbn"]);
+        
+        var find = true;
+        for(var item in histories) {
+          console.log(histories[item]["isbn"], _isbn);
+          if(histories[item]["isbn"] == _isbn){
+            find = false;
+            console.log("not saved");
+          }
+        }
+        if(find){
+          console.log("upload");
+          while(histories.length>=5){
+            histories.shift();
+          }
+          console.log("saved");
+          histories.push(data);
+        }
+    }
+
     }
   };
 });

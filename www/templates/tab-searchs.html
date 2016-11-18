@@ -5,23 +5,22 @@
         <h2>QR-コード検索</h2>
         <p>バーコードからの検索</p>
       </ion-item>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap" onClick ="scanBarcode()">
+      <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap" ng-click ="link_to_library()">
         <h2>学内検索</h2>
         <p>検索ワードからの検索</p>
       </ion-item>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap" ng-click ="link_to_all()">
+        <h2>学外検索</h2>
+        <p>検索ワードからの検索</p>
+      </ion-item>
       
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="book in books" type="item-text-wrap" ng-click="link_to_detail(book.id)">
-        <img ng-src="{{book.img}}">
+      <ion-item class="item-avatar" ng-repeat="book in books" type="item-text-wrap" ng-click="link_to_detail(book.isbn)">
+        <img ng-src="{{book.img}}"> 
         <h2>{{book.title}}</h2>
-        <p>{{book.introduction}}</p>
-        <i class="icon ion-chevron-right icon-accessory"></i>
-
-        <ion-option-button class="button-assertive" ng-click="remove(book)">
-          Delete
-        </ion-option-button>
+        <p>{{book.detail}}</p>
       </ion-item>
     </ion-list>
   </ion-content>
 </ion-view>
 
-<link href="css/tab-searchs-detail.css" rel="stylesheet">
+<link href="css/search-detail.css" rel="stylesheet">

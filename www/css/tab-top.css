@@ -9,7 +9,7 @@
 #day {
   margin: auto auto;
   text-align: center;
-  font-size: 400%;
+  font-size: 600%;
 }
 
 #weekday {
@@ -55,4 +55,8 @@ div #news-title{
 
 div#scrollbox::-webkit-scrollbar {
   display: none;
+}
+
+#day {
+ font-family: Bodidly-SansSerif;
 }

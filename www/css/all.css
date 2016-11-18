@@ -1,6 +1,6 @@
 /* Empty. Add your own CSS if you like */
 ion-item, ion-content, div .tab-nav, ion-nav-bar .bar{
-  background: linear-gradient(-90deg,#38A4D0, #6CC3B4) !important;
+  background: #DD5A59 !important/*linear-gradient(-90deg,#38A4D0, #6CC3B4) !important;*/
 }
 
 
@@ -9,7 +9,7 @@ h2,h3, div{
 }
 
 a, div.tabs {
-  background:linear-gradient(to bottom,#38A4D0, #6CC3B4) !important;
+  background: #DD5A59 !important;/*linear-gradient(to bottom,#38A4D0, #6CC3B4) !important;*/
   border-style: none !important;
 }
 

@@ -34,35 +34,32 @@ angular.module('starter.controllers', [])
     else return false;
   }
 })
-
 .controller('OptionCtrl', function($scope) {
   $scope.link_to_term = function(){
     location.href="#/tab/option/term";
   }
 })
-
 .controller('TermCtrl', function($scope) {
   $scope.goBack = function() {
     $ionicHistory.goBack();
   }
 })
-.controller('SearchsCtrl', function($scope, Books) {
-  // With the new view caching in Ionic, Controllers are only called
-  // when they are recreated or on app start, instead of every page change.
-  // To listen for when this page is active (for example, to refresh data),
-  // listen for the $ionicView.enter event:
-  //
-  //$scope.$on('$ionicView.enter', function(e) {
-  //});
-  $scope.books = Books.all();
+.controller('SearchsCtrl', function($scope, History) {
+  $scope.books = History.all();
   $scope.remove = function(book) {
     Books.remove(book);
   };
   $scope.link_to_detail = function(isbn){
-     location.href="#/tab/searchs/"+isbn
-  }
+     location.href="#/tab/searchs/"+isbn;
+  };
+  $scope.link_to_library = function(){
+     location.href="#/tab/search/library/";
+  };
+  $scope.link_to_all = function(){
+     location.href="#/tab/search/all/";
+  };
 })
-.controller('SearchDetailCtrl', function($scope, $stateParams, Books, $http) {
+.controller('SearchDetailCtrl', function($scope, $stateParams, Books, $http, History) {
   $scope.book = "";
   $scope.isbn = $stateParams.isbnId;
   $http({
@@ -72,7 +69,8 @@ angular.module('starter.controllers', [])
     $scope.book = response.data;
     console.log(response.data);
     console.log("success");
-          
+    History.update(response.data);
+    console.log(History.all());
   }, function errorCallback(response) {
     $scope.book = {  
       id: -1,
@@ -80,7 +78,6 @@ angular.module('starter.controllers', [])
       introduction: response,
       img: ''
     }
-
   });
 })
 .controller('RequestDetailCtrl', function($scope, $stateParams, $http) {
@@ -117,4 +114,43 @@ angular.module('starter.controllers', [])
         ['外部へ飛ぶ','戻る']     // buttonLabels
       );
   } 
+})
+.controller('TabSearchLibraryCtrl', function($scope, $stateParams, $http, Books){
+  $scope.want = function(word){
+    console.log(word);
+    $http({
+        method: 'GET',
+        url: root + "search_library/" + word
+      }).then(function successCallback(response) {
+         console.log(response["data"]);
+         Books.update(response["data"]['result'].map(function(e){return JSON.parse(e)}));
+         location.href="#/tab/result/";
+         console.log(Books.all());
+      }, function errorCallback(response) {
+          console.log(response);
+    });  
+  }
+})
+.controller('TabSearchAllCtrl', function($scope, $stateParams, $http, Books){
+  $scope.want = function(word){
+    console.log(word);
+    $http({
+        method: 'GET',
+        url: root + "search_all/" + word
+      }).then(function successCallback(response) {
+         console.log(response["data"]);
+         Books.update(response["data"]);
+         location.href="#/tab/result/";
+      }, function errorCallback(response) {
+          console.log(response);
+    });  
+  }
+})
+.controller('ResultCtrl', function($scope, Books){
+  console.log("result",Books.all());
+  $scope.books = Books.all();
+  console.log($scope.books);
+  $scope.link_to_detail = function(isbn){
+     location.href="#/tab/searchs/"+isbn;
+  };
 });

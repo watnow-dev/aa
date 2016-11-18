@@ -1,0 +1,13 @@
+<ion-view view-title="検索結果">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-avatar" ng-repeat="book in books" type="item-text-wrap" ng-click="link_to_detail(book.isbn)">
+        <img ng-src="{{book.img}}"> 
+        <h2>{{book.title}}</h2>
+        <p>{{book.detail}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
+
+<link href="css/search-detail.css" rel="stylesheet">
