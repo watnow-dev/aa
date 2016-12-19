@@ -1,2 +1,6 @@
 /* This is a CSS file */
 
+.history-title{
+  color: white;
+  border-left: 10px solid white;
+}

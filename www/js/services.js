@@ -35,7 +35,7 @@ angular.module('starter.services', [])
   return {
     all: function() {
       return histories;
-    },update: function(data=""){
+    },update: function(data){
       if(!localStorage["history"]){
         console.log("first time");
         localStorage["history"] = "[" + JSON.stringify(response.data) + "]";

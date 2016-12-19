@@ -22,9 +22,6 @@
   height: 120px;
   padding: auto;
   text-align: center;
-  border-bottom: 1px solid #ccc;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
 }
 .box{
   text-align: center;
@@ -37,20 +34,15 @@ h2 .ng-binding{
 
 div #news-title{
   text-align: center;
-  width: 310px;
+  width: 300px;
   margin: auto;
-  border-bottom: 1px solid #ccc;
-  border-left: 10px solid white;
-  border-right: 10px solid white;
   font-size: 20px
 }
 #scrollbox{
   margin: auto;
   width: 300px;
-  height: 100px;
+  height: 200px;
   overflow-y: scroll;
-  border-left: 1px solid white;
-  border-right: 1px solid white;
 }
 
 div#scrollbox::-webkit-scrollbar {
@@ -59,4 +51,15 @@ div#scrollbox::-webkit-scrollbar {
 
 #day {
  font-family: Bodidly-SansSerif;
+}
+
+.article{
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.slider-pager-page {
+  color: white !important;
 }

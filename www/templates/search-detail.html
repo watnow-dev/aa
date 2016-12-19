@@ -9,23 +9,30 @@
     <div class="content" ng-if='book!=""'>
         <img id="photo" ng-src="{{book.img}}">
         <ion-list>
-          <ion-item class="item-remove-animate" type="item-text-wrap" ng-if='book.place!="No Data"'>
+          <ion-item class="item-remove-animate" type="item-text-wrap" ng-if='book.libraries.length!=0'>
             <h2>請求記号 : {{book.place}}</h2>
           </ion-item>
-          <ion-item class="item-remove-animate" type="item-text-wrap" ng-if='book.place!="No Data"'>
+          <ion-item class="item-remove-animate" type="item-text-wrap" ng-if='book.libraries.length!=0'>
             <h2>配架場所</h2>
           </ion-item>
-          <ion-item class="item-remove-animate" type="item-text-wrap" ng-if='book.place=="No Data"'>
-            <a href="#/tab/request/{{isbn}}"><h2>大学へリクエストする</h2></a>
+          <ion-item class="item-remove-animate" type="item-text-wrap" ng-if='book.libraries.length==0' ng-click="link_to_request(isbn)">
+            <h2>大学へリクエストする</h2>
           </ion-item>
-          <ion-item class="item-remove-animate" type="item-text-wrap" ng-repeat="library in book.libraries">
-            <h2>{{library}}</h2>
+          <ion-item ng-if="book.libraries">
+            <table>
+              <tr class="item-remove-animate" type="item-text-wrap" ng-repeat="library in book.libraries">
+                  <td class="location">{{library["location"]}}</td>
+                  <td class="status" ng-if='library["status"]!=""'> : {{library["status"]}}</td>
+                  <td class="status" ng-if='library["status"]==""'> : 蔵書</td>
+                
+              </tr>
+            </table>
           </ion-item>
           <ion-item class="item-remove-animate" type="item-text-wrap">
             <h2>詳細</h2>
           </ion-item>
         </ion-list>
-        <p>{{book.detail}}</p>
+        <p>{{book.detail[0]}}</p>
     </div>
     <div class="content" ng-if='book==""'>
     <div id="loader"></div>

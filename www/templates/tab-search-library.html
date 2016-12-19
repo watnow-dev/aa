@@ -1,5 +1,8 @@
 <ion-view view-title="学内検索">
-  <ion-content>
+  
+ <ion-content scroll ="false">
+    <div ng-if="loading==0"
+     class="searchbox">
     <label class="item item-input">
       <span class="input-label">検索ワード</span>
       <input type="text" ng-model="$parent.word">
@@ -7,7 +10,10 @@
     <ion-item class="item-remove-animate" type="item-text-wrap"> 
       <button class="button button-block button-calm" type="submit" ng-click="want(word)">決定</button>
     </ion-item>
-    
+    </div>
+    <div class="content" ng-if="loading==1">
+      <div id="loader"></div>
+    </div>
   </ion-content>
 </ion-view>
 

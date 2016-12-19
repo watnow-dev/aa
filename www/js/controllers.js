@@ -79,6 +79,10 @@ angular.module('starter.controllers', [])
       img: ''
     }
   });
+    $scope.link_to_request = function(isbn){
+     location.href="#/tab/request/"+isbn;
+  };
+
 })
 .controller('RequestDetailCtrl', function($scope, $stateParams, $http) {
   $scope.reason = "";
@@ -116,7 +120,9 @@ angular.module('starter.controllers', [])
   } 
 })
 .controller('TabSearchLibraryCtrl', function($scope, $stateParams, $http, Books){
+  $scope.loading=0;
   $scope.want = function(word){
+    $scope.loading=1;
     console.log(word);
     $http({
         method: 'GET',
@@ -129,11 +135,14 @@ angular.module('starter.controllers', [])
       }, function errorCallback(response) {
           console.log(response);
     });  
+    $scope.loading=0;
   }
 })
 .controller('TabSearchAllCtrl', function($scope, $stateParams, $http, Books){
+  
+  $scope.loading=0;
   $scope.want = function(word){
-    console.log(word);
+    $scope.loading=1;
     $http({
         method: 'GET',
         url: root + "search_all/" + word
@@ -144,6 +153,7 @@ angular.module('starter.controllers', [])
       }, function errorCallback(response) {
           console.log(response);
     });  
+    $scope.loading=0;
   }
 })
 .controller('ResultCtrl', function($scope, Books){

@@ -1,5 +1,5 @@
 <ion-view view-title="">
-  <ion-content class="padding">
+  <ion-content class="padding" scroll ="false">
     <div id="month"><h2>{{month}}</h2></div>
     <div id="day">{{day}}</div>
     <div id="weekday"><h2>{{weekday}}</h2></div>
@@ -9,14 +9,14 @@
       </ion-slide>
     </ion-slide-box>
     <div id="news-title"><p>Library News</p></div>
-    <div id="scrollbox">
+    <ion-scroll zooming="true" direction="y" style="width: 300px; height: 200px; margin:auto">
       <div ng-repeat="news in info['news']" class="NewxBox" ng-if="judge(news[0])">
-        <div ng-click='link_news("{{news[2]}}")'>
+        <div ng-click='link_news("{{news[2]}}")' class="article">
           {{news[0]}} -
           {{news[1]}}
         </div>
       </div>
-    </div>
+    </ion-scroll>
   </ion-content>
 </ion-view>
 
