@@ -15,7 +15,8 @@ angular.module('starter.controllers', [])
       method: 'GET',
       url: root + "info"
     }).then(function successCallback(response) {
-      $scope.info = response["data"];
+      $scope.info = response;
+    console.log(JSON.stringify(response));
       localStorage.setItem("info", JSON.stringify(response["data"]));
       console.log("reload");
       $ionicSlideBoxDelegate.update();
@@ -29,7 +30,6 @@ angular.module('starter.controllers', [])
   $scope.judge = function(date){
     var month = dt.getMonth();
     var year = dt.getFullYear();
-
     if(date.substring(0,7) > year + "." + ( '0' + (dt.getMonth()-1) ).slice( -2 ))return true;
     else return false;
   }
