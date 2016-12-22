@@ -1,0 +1,65 @@
+/* This is a CSS file */
+
+#month {
+  margin: 5% auto 5% 20%;
+  text-align: left;
+  font-size: 200%;
+}
+
+#day {
+  margin: auto auto;
+  text-align: center;
+  font-size: 600%;
+}
+
+#weekday {
+  margin: 5% 20% 5% auto;
+  text-align: right;
+  font-size: 200%;
+}
+
+#boxes {
+  height: 120px;
+  padding: auto;
+  text-align: center;
+}
+.box{
+  text-align: center;
+  width 220px;
+}
+
+h2 .ng-binding{
+  background-color: #000000 !important;
+}
+
+div #news-title{
+  text-align: center;
+  width: 300px;
+  margin: auto;
+  font-size: 20px
+}
+#scrollbox{
+  margin: auto;
+  width: 300px;
+  height: 200px;
+  overflow-y: scroll;
+}
+
+div#scrollbox::-webkit-scrollbar {
+  display: none;
+}
+
+#day {
+ font-family: Bodidly-SansSerif;
+}
+
+.article{
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.slider-pager-page {
+  color: white !important;
+}

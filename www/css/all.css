@@ -1,1 +1,42 @@
 /* Empty. Add your own CSS if you like */
+ion-item, ion-content, div .tab-nav, ion-nav-bar .bar, div.tabs{
+  background: linear-gradient(-90deg,#38A4D0, #6CC3B4) !important;//#DD5A59 !important/*linear-gradient(-90deg,#38A4D0, #6CC3B4) !important;*/
+}
+h2,h3, div, table{
+  color: white;
+}
+
+a, div.tabs {
+  border-style: none !important;
+}
+
+a{
+  background-color:rgba(0,0,0,0);
+}
+
+.tab-nav, ion-nav-bar .bar{
+  border-style: none !important;
+}
+
+ion-item:first-child{
+  margin-top: 1px;
+}
+
+
+/* begin loading */
+#loader{
+    animation: spin 1s linear infinite; /*1秒毎にくるくる回転するアニメーション*/
+    margin: 50% auto;
+    width: 100px; /*ローディングアイコンの横サイズ*/
+    height: 100px; /*ローディングアイコンの縦サイズ*/
+    border-radius: 50%;  /*CSS3で円を書く*/
+    border: 20px solid #fff;  /*円に○の白枠をつける*/
+    border-right-color: transparent; /*円の右にC状の空きをつける*/
+}
+@keyframes spin{
+    0% { transform: rotate(0deg);   opacity: 0.2; } /*0%の時は20％の透明度 */
+    50%  { transform: rotate(180deg); opacity: 1.0; } /*50%の時は透明度なし*/
+    100%   { transform: rotate(360deg); opacity: 0.2; } /*100%の時に20％の透明度に戻る*/
+ 
+}
+/* end loading */

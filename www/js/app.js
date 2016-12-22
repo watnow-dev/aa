@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'ngCordova'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -30,16 +30,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
   $stateProvider
-
-  // setup an abstract state for the tabs directive
-    .state('tab', {
+  .state('tab', {
     url: '/tab',
     abstract: true,
     templateUrl: 'templates/tabs.html'
   })
-
-  // Each tab has its own nav history stack:
-
   .state('tab.top', {
     url: '/top',
     views: {
@@ -49,7 +44,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     }
   })
-
   .state('tab.option', {
    url: '/option',
     views: {
@@ -59,7 +53,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     }
   })
-
   .state('tab.term', {
     url: '/option/term',
     views: {
@@ -77,7 +70,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
         }
       }
   })
-
   .state('tab.search-detail', {
     url: '/searchs/:isbnId',
     views: {
@@ -87,7 +79,42 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     }
   })
-
+  .state('tab.request-detail', {
+    url: '/request/:isbnId',
+    views: {
+      'tab-searchs': {
+        templateUrl: 'templates/request-detail.html',
+        controller: 'RequestDetailCtrl'
+      }
+    }
+  })
+  .state('tab.tab-search-library', {
+    url: '/search/library/',
+    views: {
+      'tab-searchs': {
+        templateUrl: 'templates/tab-search-library.html',
+        controller: 'TabSearchLibraryCtrl'
+      }
+    }
+  })
+  .state('tab.tab-search-all', {
+    url: '/search/all/',
+    views: {
+      'tab-searchs': {
+        templateUrl: 'templates/tab-search-all.html',
+        controller: 'TabSearchAllCtrl'
+      }
+    }
+  })
+  .state('tab.result', {
+    url: '/result/',
+    views: {
+      'tab-searchs': {
+        templateUrl: 'templates/tab-result.html',
+        controller: 'ResultCtrl'
+      }
+    }
+  })
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/top');
 

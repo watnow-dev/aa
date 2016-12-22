@@ -1,2 +1,24 @@
 /* This is a CSS file */
 
+<<<<<<< HEAD
+=======
+#photo{
+  text-align: center;
+  width: 150px;
+  height: 200px;
+  margin: 30px auto;
+  display: block;
+}
+
+table{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.location, .status{
+  width 40%;
+  height: 20px;
+  text-align: left;
+  vertical-align: middle;
+}
+>>>>>>> 1662462fa165661032475b31e07817e35b15d191
