@@ -9,13 +9,13 @@
     <div class="content" ng-if='book!=""'>
         <img id="photo" ng-src="{{book.img}}">
         <ion-list>
-          <ion-item class="item-remove-animate" type="item-text-wrap" ng-if='book.libraries.length!=0'>
+          <ion-item class="item-remove-animate" type="item-text-wrap" ng-if='book.libraries.length'>
             <h2>請求記号 : {{book.place}}</h2>
           </ion-item>
-          <ion-item class="item-remove-animate" type="item-text-wrap" ng-if='book.libraries.length!=0'>
+          <ion-item class="item-remove-animate" type="item-text-wrap" ng-if='book.libraries.length'>
             <h2>配架場所</h2>
           </ion-item>
-          <ion-item class="item-remove-animate" type="item-text-wrap" ng-if='book.libraries.length==0' ng-click="link_to_request(isbn)">
+          <ion-item class="item-remove-animate" type="item-text-wrap" ng-if='book.libraries.length==null' ng-click="link_to_request(isbn)">
             <h2>大学へリクエストする</h2>
           </ion-item>
           <ion-item ng-if="book.libraries">
@@ -32,7 +32,8 @@
             <h2>詳細</h2>
           </ion-item>
         </ion-list>
-        <p>{{book.detail[0]}}</p>
+        <p ng-if="book.detail[0].length == 1">{{book.detail}}</p>
+        <p ng-if="book.detail[0].length != 1">{{book.detail[0]}}</p>
     </div>
     <div class="content" ng-if='book==""'>
     <div id="loader"></div>

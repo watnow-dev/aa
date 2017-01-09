@@ -13,14 +13,6 @@
         <h2>学外検索</h2>
         <p>検索ワードからの検索</p>
       </ion-item>
-      <ion-item ng-if="books.length != 0" class="history-title">
-        閲覧履歴
-      </ion-item>
-      <ion-item class="item-avatar" ng-repeat="book in books" type="item-text-wrap" ng-click="link_to_detail(book.isbn)">
-        <img ng-src="{{book.img}}"> 
-        <h2>{{book.title}}</h2>
-        <p>{{book.detail}}</p>
-      </ion-item>
     </ion-list>
   </ion-content>
 </ion-view>
